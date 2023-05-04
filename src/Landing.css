@@ -1,0 +1,41 @@
+/* .landing {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  .landing-content {
+    text-align: center;
+  }
+  
+  .landing-title {
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .landing-description {
+    font-size: 24px;
+    color: #4a0e0e;
+    margin-bottom: 40px;
+    font-family: 'Courier';
+  }
+  
+  .landing-button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier';
+  }
+  
+  .landing-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  

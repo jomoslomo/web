@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed;
+  background-color: #ffffff;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.nav-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+  font-family:'Courier';
+
+}
+
+.nav-link:hover {
+  color: #2a1281;
+}
+
+body {
+  padding-top: 60px; /* Change this value to match your navbar height */
+}
