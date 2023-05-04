@@ -1,3 +1,4 @@
+// src/app.js
 import React from 'react';
 import Landing from './Landing';
 import Projects from './Projects';
@@ -10,7 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/projects" element={<Projects />} />
 
       </Routes>
