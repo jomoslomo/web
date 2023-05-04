@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink exact to="web" className="nav-link">
+          <NavLink exact to="/web" className="nav-link">
             Hi, I'm Jony.
           </NavLink>
         </li>
@@ -18,9 +18,12 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="nav-item">
-          <a href="/jomoresume.pdf" download="JonathanMorseCV.pdf" className="nav-link">
-            Download CV
-          </a>
+        <a href="https://jomoslomo.github.io/web/JonathanMorseCV.pdf" download="JonathanMorseCV.pdf" className="nav-link" target="_blank">
+  Download CV
+</a>
+
+
+
         </li>
       </ul>
     </nav>
