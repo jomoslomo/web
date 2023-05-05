@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink exact to="/web" className="nav-link">
+          <NavLink exact to="/" className="nav-link">
             Hi, I'm Jony.
           </NavLink>
         </li>

@@ -13,3 +13,16 @@ h1 {
     li {
     margin: 10px;
     }
+    .project-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      
+      
+      .project-iframe {
+        display: flex;
+        justify-content: center;
+      }
+      
