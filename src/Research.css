@@ -98,3 +98,10 @@ button {
   }
   /* Research.css */
 /* Add this CSS to style the close button */
+
+.project-image {
+    width: 40%; /* Set the desired width */
+    max-height: 40%; /* Set the maximum height as needed */
+    object-fit: cover; /* Optional: Preserve aspect ratio and cover the container */
+  }
+  
