@@ -1,0 +1,100 @@
+/* Research.css */
+
+/* Add these styles for the buttons */
+button {
+    background-color: #007bff; /* Set your preferred button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove button border */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition when hovering */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    margin-left: 10px; /* Adjust margin as needed */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  /* You can further customize the button styles as per your design preferences */
+  
+.research-container {
+    text-align: center;
+    font-family: Courier, monospace;
+    padding: 20px;
+  }
+  
+  .research-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .research-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .research-container h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .research-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .research-container ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* You can add more styles as needed to match your design */
+  /* Research.css */
+
+/* Add these styles for the modal overlay */
+/* Research.css */
+
+/* Add these styles for the modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative; /* Ensure the close button is positioned relative to the modal */
+    z-index: 1001;
+  }
+  /* Research.css */
+  
+  
+  .model-container {
+    /* Add styles to control the position and size of the 3D model container */
+  }
+  
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: red; /* Change the color to your preferred color */
+    z-index: 1002; /* Ensure the close button is on top of other elements */
+
+  }
+  /* Research.css */
+/* Add this CSS to style the close button */

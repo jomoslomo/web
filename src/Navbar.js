@@ -18,6 +18,11 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="nav-item">
+          <NavLink exact to="./Research" className="nav-link">
+            Research
+          </NavLink>
+        </li>
+        <li className="nav-item">
         <a href="https://jomoslomo.github.io/web/JonathanMorseCV.pdf" download="JonathanMorseCV.pdf" className="nav-link" target="_blank">
   Download CV
 </a>
