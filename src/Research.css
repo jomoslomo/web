@@ -2,20 +2,21 @@
 
 /* Add these styles for the buttons */
 button {
-    background-color: #007bff; /* Set your preferred button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    border: none; /* Remove button border */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition when hovering */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    margin-left: 10px; /* Adjust margin as needed */
-  }
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Courier';
+}
   
   button:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    background-color: #333;
+    color: #fff;
   }
+  
   
   /* You can further customize the button styles as per your design preferences */
   
@@ -103,5 +104,11 @@ button {
     width: 40%; /* Set the desired width */
     max-height: 40%; /* Set the maximum height as needed */
     object-fit: cover; /* Optional: Preserve aspect ratio and cover the container */
+  }
+  
+  .sketch-container {
+    width: 640px; /* Match the width of your p5 canvas */
+    height: 480px; /* Match the height of your p5 canvas */
+    margin-bottom: 10px; /* Space above the 'More Info' button */
   }
   

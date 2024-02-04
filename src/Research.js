@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import './Research.css'; // Import your CSS file
 import ThreeDModelScene from './ThreeDModelScene'; // Import the ThreeDModelScene component
+import MySketch from './MySketch';
 
 function Research() {
   const [showModal, setShowModal] = useState(false);
@@ -13,24 +15,30 @@ function Research() {
       name: 'Extraterrestrial Construction',
       title: 'Research Assistant, Part-time, Aug 2023 - Present',
       videoUrl: '/lunarBot.mp4',
+      sketchImagePath: '/xConstruction.jpg', 
       description: 'As an undergraduate Researcher in collaboration between the LSU Construction Management and Computer Science Departments, my work revolves around leveraging the capabilities of Unreal Engine and Meta Quest to revolutionize space construction training. With funding from the NSF, I am at the forefront of preparing construction professionals for extraterrestrial challenges.'
     },
-    {
-      name: 'Self-Sensing Materials',
-      title: 'Research Assistant, May 2023 - Present',
-      has3DModel: false,
-      imageUrl: '/concreteLab.png', 
-      description: 'In my role as a Research Assistant at LSU’s Civil and Environmental Engineering Department, I collaborate with a team of engineers on a project focused on deciphering the mechanism of self-sensing cementitious composites. Utilizing a data-driven approach, we explore the use of electrically conductive materials for monitoring purposes in concrete structures.'
-    },
+
     {
       name: 'NASA Digital Twin Project',
       title: 'Project Intern, May 2023 - Aug 2023',
       videoUrl: '/roboticArm.mp4',
-      has3DModel: false,
-      description: 'As a Project Intern at NASA, I had a pivotal role in the development of a digital twin project focused on the Michoud Assembly Facility. Within this project, my primary responsibility was to design and implement a control flow using VR and AR technologies to operate a uFactory xArm. This involved establishing web socket connections to link the xArm SDK with an Unreal Engine program.'
+      has3DModel: true,
+      //sketchImagePath: '/.png', 
+      
+      description: 'As a Project Intern at NASA, I had a pivotal role in the development of a digital twin project focused on the Michoud Assembly Facility. Within this project, my primary responsibility was to design and implement a control flow using VR and AR technologies to operate a uFactory xArm. This involved establishing web socket connections to link the xArm SDK with an Unreal Engine program.',
+      stlUrl: 'xArm5.stl'
+
     },
-    // Add more ongoing projects as needed
-  ];
+    {
+      name: 'Self-Sensing Materials',
+      title: 'Research Assistant, May 2023 - Present',
+      imageUrl: '/concreteLab.png', 
+      sketchImagePath: '/concreteLabs.jpg', 
+      has3DModel: true,
+      description: 'In my role as a Research Assistant at LSU’s Civil and Environmental Engineering Department, I collaborate with a team of engineers on a project focused on deciphering the mechanism of self-sensing cementitious composites. Utilizing a data-driven approach, we explore the use of electrically conductive materials for monitoring purposes in concrete structures.'
+    },
+    ];
 
   const openModal = (content) => {
     setSelectedProject(content);
@@ -47,6 +55,7 @@ function Research() {
     setRenderScene(true);
   };
 
+  
   return (
     <div className="research-container">
       <h1>Research Page</h1>
@@ -55,13 +64,17 @@ function Research() {
       </p>
       <h2>Ongoing Projects</h2>
       <ul>
-        {projectsData.map((project, index) => (
-          <li key={index}>
-            {project.name}: {project.title}
-            <button onClick={() => openModal(project)}>More Info</button>
-          </li>
-        ))}
-      </ul>
+  {projectsData.map((project, index) => (
+    <li key={project.name}> {/* Use a unique property, like project.name */}
+      {project.name}
+      {project.sketchImagePath && <MySketch imagePath={project.sketchImagePath} />}
+
+      {project.has3DModel && project.stlUrl && <ThreeDModelScene stlUrl={project.stlUrl} />}
+      <button onClick={() => openModal(project)}>More Info</button>
+    </li>
+  ))}
+</ul>
+
 
       {/* Modal */}
       {showModal && selectedProject && (
@@ -86,19 +99,13 @@ function Research() {
 )}
             {/* Description */}
             {selectedProject.description && <p>{selectedProject.description}</p>}
-     
+       
 
             {/* Add more fields as needed */}
-            {selectedProject.has3DModel ? (
-              <div className="model-container">
-                {renderScene ? (
-                  <ThreeDModelScene />
-                ) : (
-                  <button onClick={render3DScene}>Render Scene</button>
-                )}
-              </div>
-            ) : null}
+
+            
           </div>
+          
         </div>
       )}
     </div>
@@ -106,3 +113,5 @@ function Research() {
 }
 
 export default Research;
+
+

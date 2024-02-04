@@ -32,11 +32,10 @@ const ThreeDModelRenderer = ({ stlUrl }) => {
     if (containerSize.width === 0 || containerSize.height === 0) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xeeeeee);
+    scene.background = new THREE.Color("white");
 
     const camera = new THREE.PerspectiveCamera(75, containerSize.width / containerSize.height, 0.1, 1000);
-    camera.position.set(0, 0, 100);
-
+    camera.position.set(0, .09,.1);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(containerSize.width, containerSize.height);
     ref.current.appendChild(renderer.domElement);
@@ -61,6 +60,8 @@ const ThreeDModelRenderer = ({ stlUrl }) => {
       const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
       const mesh = new THREE.Mesh(geometry, material);
       mesh.scale.set(0.1, 0.1, 0.1);
+      mesh.rotation.x = 180;
+
       scene.add(mesh);
 
       const animate = () => {
