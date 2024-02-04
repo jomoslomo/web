@@ -85,7 +85,7 @@ function Research() {
             {selectedProject.title && <p>{selectedProject.title}</p>}
             {selectedProject.videoUrl ? (
               <div className="video-container">
-                <video width={selectedProject.videoUrl.includes('lunarBot') ? '40%' : '80%'} controls>
+                <video width={selectedProject.videoUrl.includes('lunarBot') ? '35%' : '75%'} controls>
                   <source src={selectedProject.videoUrl} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

@@ -57,7 +57,7 @@ const ThreeDModelRenderer = ({ stlUrl }) => {
     loader.load(stlUrl, (geometry) => {
       console.log("STL Loaded");
       geometry.center();
-      const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+      const material = new THREE.MeshStandardMaterial({ color: "white" });
       const mesh = new THREE.Mesh(geometry, material);
       mesh.scale.set(0.1, 0.1, 0.1);
       mesh.rotation.x = 180;

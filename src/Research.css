@@ -76,7 +76,11 @@ button {
     background: white;
     padding: 20px;
     border-radius: 5px;
-    position: relative; /* Ensure the close button is positioned relative to the modal */
+    position: relative;
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+
+    overflow: auto; /* Add scrollbars if needed */
     z-index: 1001;
   }
   /* Research.css */
@@ -91,7 +95,7 @@ button {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 200%;
     cursor: pointer;
     color: red; /* Change the color to your preferred color */
     z-index: 1002; /* Ensure the close button is on top of other elements */
@@ -101,8 +105,8 @@ button {
 /* Add this CSS to style the close button */
 
 .project-image {
-    width: 40%; /* Set the desired width */
-    max-height: 40%; /* Set the maximum height as needed */
+    width: 55%; /* Set the desired width */
+    max-height: 55%; /* Set the maximum height as needed */
     object-fit: cover; /* Optional: Preserve aspect ratio and cover the container */
   }
   
